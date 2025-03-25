@@ -194,7 +194,6 @@ class _MyHomePageState extends State<MyHomePage> {
             onPanEnd: (details) {
               setState(() {
                 if (currentPoint != null) {
-                  // Проверка на пересечение новой линии с предыдущими линиями
                   if (!isLineIntersecting()) {
                     fixedPoint = currentPoint;
                     points.add(currentPoint!);
@@ -203,7 +202,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     }
                     currentPoint = null;
                   } else {
-                    // Если линия пересекается, отменяем нарисованную точку
                     currentPoint = null;
                   }
                 }
